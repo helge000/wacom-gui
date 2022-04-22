@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 #from PyQt5.QtGui import QWidget, QPolygonF, QPainter, QPen, QBrush, QColor, \
 #    QApplication, QIcon, QVBoxLayout, QHBoxLayout, QPushButton, QPainterPath,\

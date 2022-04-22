@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 from PyQt5.QtCore import *
@@ -373,7 +373,7 @@ class WacomGui(QMainWindow, wacom_menu.Ui_MainWindow):
         write = False
         if not self.toolButtons.buttons[(0, 0)].isHidden():
             pad = self.pad.get_config()
-            if pad != self.configs[self.dev][self.config]['pad']['buttons']:
+            if pad != self.configs[self.dev][self.config]['pad'].get('buttons'):
                 write = True
                 self.configs[self.dev][self.config]['pad']['buttons'] = pad
         if not self.toolButtons.buttons[(1, 0)].isHidden():
@@ -504,7 +504,7 @@ class ButtonGroup(QObject):
 
     def addButton(self, label, wid=0, dev=0, dev_id=0, icon=None, isize=48, hide=False):
         select = False
-        idx = self.buttons.__len__() / 4
+        idx = int(self.buttons.__len__() / 4)
         self.buttons[(idx, 0)] = QToolButton()
         self.btn_grp.addButton(self.buttons[(idx, 0)], idx)
         self.buttons[(idx, 1)] = dev

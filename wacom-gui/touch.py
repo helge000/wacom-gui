@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from PyQt5 import QtCore, QtGui
 import sys, os, re
